@@ -1,6 +1,3 @@
-# PML_Module4
-Prediction Assignment, Fitness Devices
-
 ---
 title: "PML_Mod4_Assignment"
 author: "Justinian Wurtzel, MSc"
@@ -89,6 +86,8 @@ summary(validationSet)
 library(caret)
 library(randomForest)
 library(doParallel)
+# Perhaps it's my computer setup or issues with my code but I did need to reduce tunelength and ntree 
+# to have a reasonable computation time or it would be running much longer. I also used the doparallel package # to hopefully speed up the analysis, unsure of it's impact, thank you!
 
 # Set up cross-validation with 3-fold CV
 ctrl <- trainControl(method = "cv", number = 3, verboseIter = TRUE)
@@ -110,13 +109,17 @@ rf_model <- train(classe ~ .,
 
 stopCluster(cl)
 
+```
 
+```{r}
 # Print the model summary
 print(rf_model)
 
+```
+
+```{r}
 # Plot the model to visualize the tuning results
 plot(rf_model)
 
 ```
-
 
