@@ -112,7 +112,7 @@ stopCluster(cl)
 ```
 
 ```{r}
-# Print the model summary
+# Model summary
 print(rf_model)
 Random Forest 
 
@@ -135,7 +135,7 @@ The final value used for the model was mtry = 4749.
 ```
 
 ```{r}
-# Plot the model to visualize the tuning results
+# Tune results, 000010.png with printout
 plot(rf_model)
 
 ```
