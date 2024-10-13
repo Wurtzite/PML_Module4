@@ -114,7 +114,24 @@ stopCluster(cl)
 ```{r}
 # Print the model summary
 print(rf_model)
+Random Forest 
 
+13737 samples
+   85 predictor
+    5 classes: 'A', 'B', 'C', 'D', 'E' 
+
+No pre-processing
+Resampling: Cross-Validated (3 fold) 
+Summary of sample sizes: 9157, 9159, 9158 
+Resampling results across tuning parameters:
+
+  mtry  Accuracy   Kappa    
+     2  0.2843416  0.0000000
+    97  0.9218902  0.9010683
+  4749  0.9806360  0.9755070
+
+Accuracy was used to select the optimal model using the largest value.
+The final value used for the model was mtry = 4749.
 ```
 
 ```{r}
